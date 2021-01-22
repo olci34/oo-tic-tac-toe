@@ -262,7 +262,9 @@ describe './lib/tic_tac_toe.rb' do
     describe '#over?' do
       it 'returns true for a draw' do
         game = TicTacToe.new
-        board = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
+        board = ["X", "O", "X", 
+                 "O", "X", "X", 
+                 "O", "X", "O"]
         game.instance_variable_set(:@board, board)
 
         expect(game.over?).to be_truthy
